@@ -15,6 +15,8 @@ export type DesignSourceSummary = {
   wordCount: number
 }
 
+const DESIGN_CONTENT_ROOT = path.join(process.cwd(), "content", "design-md")
+
 function summarizeMarkdown(markdown: string, fallbackTitle: string) {
   const normalized = markdown.replace(/\r\n/g, "\n")
   const lines = normalized.split("\n").map((line) => line.trim())
@@ -47,16 +49,17 @@ function summarizeMarkdown(markdown: string, fallbackTitle: string) {
 
 async function readSummary(slug: DesignSlug): Promise<DesignSourceSummary> {
   const profile = getDesignProfile(slug)
-  const designMdPath = path.join(profile.sourceDir, "DESIGN.md")
-  const previewHtmlPath = path.join(profile.sourceDir, "preview.html")
+  const sourceDir = path.join(DESIGN_CONTENT_ROOT, slug)
+  const designMdPath = path.join(sourceDir, "DESIGN.md")
+  const previewHtmlPath = path.join(sourceDir, "preview.html")
   const markdown = await readFile(designMdPath, "utf8")
   const summary = summarizeMarkdown(markdown, profile.displayName)
 
   return {
     slug,
     sourceDir: profile.sourceDir,
-    designMdPath,
-    previewHtmlPath,
+    designMdPath: path.posix.join(profile.sourceDir, "DESIGN.md"),
+    previewHtmlPath: path.posix.join(profile.sourceDir, "preview.html"),
     ...summary,
   }
 }

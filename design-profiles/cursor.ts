@@ -3,8 +3,7 @@ import { defineProfile } from "./_shared";
 export const cursorProfile = defineProfile({
   slug: "cursor",
   displayName: "Cursor",
-  sourceDir:
-    "/Users/qiang/Desktop/Vibe Project/Shadcn Study/designmd-skill/awesome-design-md-add-issue-template/design-md/cursor",
+  sourceDir: "content/design-md/cursor",
   fonts: {
     sans: {
       family: "system-ui",

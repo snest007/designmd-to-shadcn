@@ -3,8 +3,7 @@ import { defineProfile } from "./_shared";
 export const notionProfile = defineProfile({
   slug: "notion",
   displayName: "Notion",
-  sourceDir:
-    "/Users/qiang/Desktop/Vibe Project/Shadcn Study/designmd-skill/awesome-design-md-add-issue-template/design-md/notion",
+  sourceDir: "content/design-md/notion",
   fonts: {
     sans: {
       family: "Inter",

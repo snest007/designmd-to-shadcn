@@ -3,8 +3,7 @@ import { defineProfile } from "./_shared";
 export const stripeProfile = defineProfile({
   slug: "stripe",
   displayName: "Stripe",
-  sourceDir:
-    "/Users/qiang/Desktop/Vibe Project/Shadcn Study/designmd-skill/awesome-design-md-add-issue-template/design-md/stripe",
+  sourceDir: "content/design-md/stripe",
   fonts: {
     sans: {
       family: "SF Pro Display",

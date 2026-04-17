@@ -3,8 +3,7 @@ import { defineProfile } from "./_shared";
 export const claudeProfile = defineProfile({
   slug: "claude",
   displayName: "Claude",
-  sourceDir:
-    "/Users/qiang/Desktop/Vibe Project/Shadcn Study/designmd-skill/awesome-design-md-add-issue-template/design-md/claude",
+  sourceDir: "content/design-md/claude",
   fonts: {
     sans: {
       family: "Arial",

@@ -3,8 +3,7 @@ import { defineProfile } from "./_shared";
 export const ibmProfile = defineProfile({
   slug: "ibm",
   displayName: "IBM",
-  sourceDir:
-    "/Users/qiang/Desktop/Vibe Project/Shadcn Study/designmd-skill/awesome-design-md-add-issue-template/design-md/ibm",
+  sourceDir: "content/design-md/ibm",
   fonts: {
     sans: {
       family: "IBM Plex Sans",

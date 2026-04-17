@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## DESIGN.md Playground
+
+This app previews a shared shadcn canvas with multiple hand-maintained `DESIGN.md` profiles.
+
+The five supported source packs are vendored inside the repo under `content/design-md/` so deployment does not depend on any local absolute path:
+
+- `ibm`
+- `cursor`
+- `stripe`
+- `notion`
+- `claude`
 
 ## Getting Started
 
@@ -14,11 +24,24 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000/playground](http://localhost:3000/playground) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Source Content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Brand source files live in:
+
+```text
+content/design-md/<brand>/
+```
+
+Each brand folder currently includes:
+
+- `DESIGN.md`
+- `README.md`
+- `preview.html`
+- `preview-dark.html`
+
+The app reads those files from relative paths at build time, which makes static deployment work on Vercel and similar platforms.
 
 ## Learn More
 
